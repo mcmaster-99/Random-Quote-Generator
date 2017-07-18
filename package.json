@@ -1,0 +1,21 @@
+{
+  "name": "random-quote-generator",
+  "version": "1.0.0",
+  "description": "displays random quotes",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcmaster-99/Random-Quote-Generator.git"
+  },
+  "author": "Bilal Hjiouaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcmaster-99/Random-Quote-Generator/issues"
+  },
+  "homepage": "https://github.com/mcmaster-99/Random-Quote-Generator#readme"
+}

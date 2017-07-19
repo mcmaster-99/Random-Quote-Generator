@@ -1,9 +1,14 @@
 {
   "name": "random-quote-generator",
   "version": "1.0.0",
-  "description": "displays random quotes",
+  "description": "Displays random quotes from an API.",
   "main": "script.js",
-  "dependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "Bilal Hjiouaj",
+  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "latest",
@@ -15,15 +20,11 @@
     "gulp-uglify": "latest",
     "gulp-util": "latest"
   },
-  "scripts": {
-    "test": "test"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcmaster-99/Random-Quote-Generator.git"
   },
-  "author": "Bilal Hjiouaj",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mcmaster-99/Random-Quote-Generator/issues"
   },

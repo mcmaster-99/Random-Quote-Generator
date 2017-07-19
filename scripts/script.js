@@ -1,3 +1,8 @@
+/*========================================
+  ==      Code by Bilal Hjiouaj         ==
+  ========================================
+*/
+
 // These are the colors (10) used to change the background color upon new quote button click.
 var colors = ["#C0392B", //MAROON
               "#E74C3C", //RED
@@ -11,12 +16,12 @@ var colors = ["#C0392B", //MAROON
               "#5D6D7E"];//GREY
 
 /*
-=================================================================
-Function to fetch new quote (using AJAX) from quotesdesign API===
-=================================================================
+==================================================================
+==Function to fetch new quote (using AJAX) from quotesdesign API==
+==================================================================
 */
 function randomQuote(){
-  // Data Extraction Using Ajax (quote)
+  // Data Fetch Using Ajax (quote)
     $.ajax({
       url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
       type: "GET",
@@ -25,7 +30,7 @@ function randomQuote(){
       
       success:function(data){
         
-        $(".quote").html(data[0].content + "-" + data[0].title).fadeIn();
+        $("#quote").html(data[0].content + "-" + data[0].title).fadeIn();
         
       },
       
@@ -34,16 +39,16 @@ function randomQuote(){
       }
       
     });
-}
+} // End randomQuote()
 
 /*
-=================
-Tweet Function===
-=================
+==================
+==Tweet Function==
+==================
 */
 function tweet() {
   $(".twitter-share-button").click(function() {
-      window.open("https://twitter.com/intent/tweet?text=" + $(".quote").text());
+      window.open("https://twitter.com/intent/tweet?text=" + $("#quote").text());
   });
 }
 
@@ -63,7 +68,7 @@ $(document).ready(function() {
       "transition": "all 4s ease"
     });
   
-  $(".quote").fadeOut(function(){
+  $("#quote").fadeOut(function(){
       $(this).css("color", randomColor);
     }).fadeIn("slow");
   
@@ -85,7 +90,8 @@ $(document).ready(function() {
       "transition": "all 4s ease"
     });
     
-    $(".quote").fadeOut(function(){
+    // Fade Animations
+    $("#quote").fadeOut(function(){
       $(this).css("color", randomColor);
     }).fadeIn("slow");
     
@@ -94,10 +100,6 @@ $(document).ready(function() {
       "transition": "all 2s ease"
     });
     
-    $("#quotations").css({
-      "color": randomColor,
-      "transition": "all 2s ease"
-    });
     
   });
   

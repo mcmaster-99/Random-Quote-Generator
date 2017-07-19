@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Francois+One|Lemonada);
+
+$trans: rgba(0,0,0,0);
+
+.title {
+  text-align: center;
+  font-family: 'Francois One', sans-serif;
+}
+
+.well {
+  max-width: 500px;
+  border-radius: 3%;
+  margin: auto;
+  margin-top: 75px;
+}
+
+#quote {
+  font-size: 15px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.quote-btn {
+  color: #ffffff;
+  background: $trans;
+  border: solid 5px #ffffff;
+  margin-top: 10px;
+  height: 40px;
+}
+.quote-btn:hover {
+  border-color: #e5e5e5;
+  color: #e5e5e5;
+}
+.quote-btn:active {
+  border-color: #b2b2b2;
+  color: #b2b2b2;
+}
+
+#twitter {
+  background-color: #4099FF;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+a {
+	color: white;
+}
+
+#footer {
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 60px;
+}

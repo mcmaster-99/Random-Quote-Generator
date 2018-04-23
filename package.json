@@ -1,32 +1,30 @@
 {
-  "name": "random-quote-generator",
-  "version": "1.0.0",
-  "description": "Displays random quotes from an API.",
+  "name": "weather-app",
+  "version": "1.2.0",
+  "description": "displays the current weather of a user's location",
   "main": "script.js",
   "scripts": {
     "test": "test"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcmaster-99/Local-Weather.git"
+  },
   "author": "Bilal Hjiouaj",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.12",
-    "gulp": "latest",
+    "gulp": "^3.9.1",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
     "gulp-livereload": "^3.8.1",
-    "gulp-sass": "latest",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "latest",
     "gulp-util": "latest"
   },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mcmaster-99/Random-Quote-Generator.git"
-  },
   "bugs": {
-    "url": "https://github.com/mcmaster-99/Random-Quote-Generator/issues"
+    "url": "https://github.com/mcmaster-99/Local-Weather/issues"
   },
-  "homepage": "https://github.com/mcmaster-99/Random-Quote-Generator#readme"
+  "homepage": "https://github.com/mcmaster-99/Local-Weather#readme"
 }

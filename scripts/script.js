@@ -1,8 +1,3 @@
-/*========================================
-  ==      Code by Bilal Hjiouaj         ==
-  ========================================
-*/
-
 // These are the colors (10) used to change the background color upon new quote button click.
 var colors = ["#C0392B", //MAROON
               "#E74C3C", //RED
@@ -16,12 +11,12 @@ var colors = ["#C0392B", //MAROON
               "#5D6D7E"];//GREY
 
 /*
-==================================================================
-==Function to fetch new quote (using AJAX) from quotesdesign API==
-==================================================================
+======================================================================
+====Function to fetch new quote (using AJAX) from quotesdesign API====
+======================================================================
 */
 function randomQuote(){
-  // Data Fetch Using Ajax (quote)
+  // Data Extraction Using Ajax (quote)
     $.ajax({
       url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
       type: "GET",
@@ -30,7 +25,7 @@ function randomQuote(){
       
       success:function(data){
         
-        $("#quote").html(data[0].content + "-" + data[0].title).fadeIn();
+        $(".quote").html(data[0].content + "-" + data[0].title).fadeIn();
         
       },
       
@@ -39,18 +34,20 @@ function randomQuote(){
       }
       
     });
-} // End randomQuote()
+}
 
 /*
-==================
-==Tweet Function==
-==================
+====================
+===Tweet Function===
+====================
 */
 function tweet() {
   $(".twitter-share-button").click(function() {
-      window.open("https://twitter.com/intent/tweet?text=" + $("#quote").text());
+      window.open("https://twitter.com/intent/tweet?text=" + $(".quote").text());
   });
 }
+
+
 
 
 /*
@@ -59,6 +56,10 @@ function tweet() {
 ========================
 */
 $(document).ready(function() {
+
+  // ------------------------------------------------------------------
+  // ------------------ WHEN PAGE IS FIRST LOADED ---------------------
+  // ------------------------------------------------------------------
   randomQuote();
   tweet();
   
@@ -68,19 +69,18 @@ $(document).ready(function() {
       "transition": "all 4s ease"
     });
   
-  $("#quote").fadeOut(function(){
+  // Color fader
+  $(".quote").fadeOut(function(){
       $(this).css("color", randomColor);
     }).fadeIn("slow");
   
-  // Random Quote Button
+
+  // ------------------------------------------------------------------
+  // -------------- WHEN "NEW QUOTE" BUTTON IS CLICKED ----------------
+  // ------------------------------------------------------------------
   $("#getmessage").click(function() {
     randomQuote();
-    
-    // Tweet Button
     tweet();
-    
-  // Post to Facebook Button
-  
   
     
     // Color Generator
@@ -90,17 +90,23 @@ $(document).ready(function() {
       "transition": "all 4s ease"
     });
     
-    // Fade Animations
-    $("#quote").fadeOut(function(){
+    // COLOR FADER
+    $(".quote").fadeOut(function(){
       $(this).css("color", randomColor);
     }).fadeIn("slow");
     
+    // AUTHOR STYLING
     $(".quoteAuthor").css({
       "color": randomColor,
       "transition": "all 2s ease"
     });
     
+    // QUOTATION STYLING
+    $("#quotations").css({
+      "color": randomColor,
+      "transition": "all 2s ease"
+    });
     
-  });
+  }); // END RANDOM QUOTE BUTTON
   
 });

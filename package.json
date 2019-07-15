@@ -1,14 +1,14 @@
 {
   "name": "weather-app",
   "version": "1.2.0",
-  "description": "displays the current weather of a user's location",
+  "description": "displays and cycles through random quotes",
   "main": "script.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcmaster-99/Local-Weather.git"
+    "url": "git+https://github.com/mcmaster-99/Random-Quote-Generator.git"
   },
   "author": "Bilal Hjiouaj",
   "license": "ISC",
@@ -24,7 +24,7 @@
     "gulp-util": "latest"
   },
   "bugs": {
-    "url": "https://github.com/mcmaster-99/Local-Weather/issues"
+    "url": "https://github.com/mcmaster-99/Random-Quote-Generator/issues"
   },
-  "homepage": "https://github.com/mcmaster-99/Local-Weather#readme"
+  "homepage": "https://github.com/mcmaster-99/Random-Quote-Generator#readme"
 }

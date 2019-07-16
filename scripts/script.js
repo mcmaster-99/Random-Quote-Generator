@@ -17,23 +17,22 @@ var colors = ["#C0392B", //MAROON
 */
 function randomQuote(){
   // Data Extraction Using Ajax (quote)
-    $.ajax({
-      url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
-      type: "GET",
-      datatype: 'jsonp',
-      cache: false,
-      
-      success:function(data){
-        
-        $(".quote").html(data[0].content + "-" + data[0].title).fadeIn();
-        
-      },
-      
-      error:function(){
-        alert("Cannot open URL.");
-      }
-      
-    });
+  $.ajax({
+    url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
+    type: "GET",
+    "headers": {
+      'Access-Allow-Control-Origin': '*',
+      'Access-Allow-Control-Methods': '*',
+    },
+    success: function(data){
+      console.log(data)
+      $(".quote").html(data[0].content + "-" + data[0].title).fadeIn();
+    },
+    error: function(){
+      alert("Cannot open URL.");
+    }
+    
+  });
 }
 
 /*

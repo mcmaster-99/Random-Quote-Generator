@@ -5,7 +5,7 @@
 
 .well {
   max-width: 500px;
-  border-radius: 5% !important;
+  border-radius: 10px;
   transition: max-height 5s ease-out;
   margin: 0 auto;
   margin-top: 75px;
@@ -50,14 +50,10 @@
   border-radius: 50%;
 }
 
-html, body {
-  margin-bottom: 50px;  
-}
-
 #footer {
   text-align: center;
-  position: absolute;
-  bottom: 5px;
+  position: fixed;
+  bottom: 5rem;
   width: 100%;
   height: 5px;
 }

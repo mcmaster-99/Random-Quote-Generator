@@ -18,20 +18,15 @@ var colors = ["#C0392B", //MAROON
 function randomQuote(){
   // Data Extraction Using Ajax (quote)
   $.ajax({
-    url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
+    url: "https://api.quotable.io/random",
     type: "GET",
-    "headers": {
-      'Access-Allow-Control-Origin': '*',
-      'Access-Allow-Control-Methods': '*',
-    },
     success: function(data){
       console.log(data)
-      $(".quote").html(data[0].content + "-" + data[0].title).fadeIn();
+      $(".quote").html(data.content + "<br>" + "-" + data.author).fadeIn();
     },
     error: function(){
       alert("Cannot open URL.");
     }
-    
   });
 }
 
@@ -78,7 +73,6 @@ $(document).ready(function() {
   // -------------- WHEN "NEW QUOTE" BUTTON IS CLICKED ----------------
   // ------------------------------------------------------------------
   $("#getmessage").click(function() {
-    randomQuote();
     tweet();
   
     
@@ -92,6 +86,7 @@ $(document).ready(function() {
     // COLOR FADER
     $(".quote").fadeOut(function(){
       $(this).css("color", randomColor);
+      randomQuote();
     }).fadeIn("slow");
     
     // AUTHOR STYLING

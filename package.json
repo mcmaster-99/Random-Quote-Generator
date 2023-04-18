@@ -13,7 +13,7 @@
   "author": "Bilal Hjiouaj",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.29.1",
     "gulp": "^3.9.1",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
